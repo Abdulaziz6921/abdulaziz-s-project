@@ -190,7 +190,12 @@ const Main = () => {
             Let's learn, share & inspire each other with our passion for
             computer engineering. Sign up now 🤘🏼
           </div>
-          <form className={stl.boxSignUp}>
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
+            className={stl.boxSignUp}
+          >
             <div className={stl.signUp}>
               <div className={stl.header1}>
                 <p>Create Account</p>
@@ -236,14 +241,9 @@ const Main = () => {
                 <button onClick={myFunc} className={stl.createBtn}>
                   Create Account
                 </button>
-                <button>
-                  <span
-                    onClick={() => setSignIn(true)}
-                    className="underline lg:hidden"
-                  >
-                    or, Sign in
-                  </span>
-                </button>
+                <div onClick={() => setSignIn(true)}>
+                  <p className="underline lg:hidden">or, Sign in</p>
+                </div>
               </div>
 
               <button className={stl.easySigning}>
