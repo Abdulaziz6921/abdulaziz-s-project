@@ -237,12 +237,12 @@ const Main = () => {
                   Create Account
                 </button>
                 <button>
-                  <a
+                  <span
                     onClick={() => setSignIn(true)}
                     className="underline lg:hidden"
                   >
                     or, Sign in
-                  </a>
+                  </span>
                 </button>
               </div>
 
@@ -262,9 +262,9 @@ const Main = () => {
             <div className={stl.vectorImgPart}>
               <p className="text-[13px] mb-[31px]">
                 Already have an account?{" "}
-                <a className="text-btn2" onClick={() => setSignIn(true)}>
+                <span className="text-btn2" onClick={() => setSignIn(true)}>
                   Sign In
-                </a>
+                </span>
               </p>
               <div className={stl.vectorImg}>
                 <img
@@ -305,12 +305,12 @@ const Main = () => {
               <div className={stl.btns}>
                 <button className={stl.createBtn}>Sign In</button>
                 <button>
-                  <a
+                  <p
                     onClick={() => setSignIn(false)}
                     className="underline lg:hidden"
                   >
                     or, Create Account
-                  </a>
+                  </p>
                 </button>
               </div>
 
@@ -322,15 +322,15 @@ const Main = () => {
                 <FcGoogle className="mr-[10px]" /> Sign in with Google
               </button>
               <div className="mx-auto text-center mt-[22px] text-[12px] ">
-                <a>Forgot Password?</a>
+                <p>Forgot Password?</p>
               </div>
             </div>
             <div className={stl.vectorImgPart}>
               <p className="text-[13px] mb-[31px]">
                 Don’t have an account yet?
-                <a className="text-btn2" onClick={() => setSignIn(false)}>
+                <span className="text-btn2" onClick={() => setSignIn(false)}>
                   Create new for free!
-                </a>
+                </span>
               </p>
               <div className={stl.vectorImg}>
                 <img

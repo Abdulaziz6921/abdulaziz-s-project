@@ -1,23 +1,12 @@
-import { React, useContext, useState, useEffect } from "react";
+import { React, useContext } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { BsSearch } from "react-icons/bs";
 import { UserContext } from "../context/user";
 
 const Navbar = () => {
   const { user } = useContext(UserContext);
-  const [name, setName] = useState("create");
-  // console.log(user);
 
-  useEffect(() => {
-    window.location.onload = () => {
-      if (user.length) {
-        setName(user);
-        console.log(user);
-      } else {
-        setName("create it");
-      }
-    };
-  }, []);
+  // console.log(user);
 
   const stl = {
     size: "relative w-full h-[24px] flex justify-end items-center md:h-[72px] md:justify-around",
